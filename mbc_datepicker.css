@@ -1,0 +1,62 @@
+.mbcdp_stage *:focus {outline:0;}
+.datepicker{
+	position: relative;
+}
+.mbcdp_stage{
+	display:none;
+	width:100%;
+	max-width:350px;
+	min-height:100px;
+	background: #fff;
+	position:absolute;
+	left:0;
+	border:1px solid #bbb;
+}
+.mbcdp_stage tbody{
+	background-color:#fff;
+}
+.mbcdp_toprow{
+	display:block;
+}
+.mbcdp_toprow a{
+	position:absolute;
+	font-size:20px;
+	text-decoration: none;
+}
+.mbcdp_toprow a:hover{
+	text-decoration: none;
+}
+.mbcdp_toprow a.prev{
+	left:5px;top:0;
+}
+.mbcdp_toprow a.next{
+	right:5px;top:0;
+}
+.mbcdp_month_disp{
+	display:block;text-align:center;
+	font-size:20px;
+}
+.mbcdp_calendar{
+	width:100%;
+	margin:0;padding:0;
+	background: #eee;
+	margin-bottom:10px;	
+}
+.mbcdp_calendar td,
+.mbcdp_calendar th{
+	text-align:center;
+	font-size:16px;
+}
+.mbcdp_monthyear{
+	display:none;
+}
+.mbcdp_day{
+	padding:5px;
+}
+.mbcdp_day:hover{
+	text-decoration:none;
+	background:#eee;
+}
+.mbcdp_active_day{
+	background-color:#444;color:#fff;
+}
