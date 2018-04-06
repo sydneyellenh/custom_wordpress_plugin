@@ -1,0 +1,70 @@
+.mbc-cdc-clock-onpage div {
+     display: inline-block;
+    border: 1px solid black;
+ }
+
+.mbc-cdc-clock-onpage table {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mbc-cdc-clock-onpage th, .mbc-cdc-clock-onpage td {
+    text-align: center;
+    padding: 10px 40px 10px 40px;
+}
+
+.mbc-cdc-clock-onpage {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    .mbc-cdc-clock-onpage table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .mbc-cdc-clock-onpage th tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .mbc-cdc-clock-onpage th{
+        display: none;
+    }
+    
+    .mbc-cdc-clock-onpage tr { border: 1px solid #ccc; }
+
+    .mbc-cdc-clock-onpage td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .mbc-cdc-clock-onpage td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 100%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    .mbc-cdc-clock-onpage td:nth-of-type(1):before { content: "Days"; }
+    .mbc-cdc-clock-onpage td:nth-of-type(2):before { content: "Hours"; }
+    .mbc-cdc-clock-onpage td:nth-of-type(3):before { content: "Minutes"; }
+    .mbc-cdc-clock-onpage td:nth-of-type(4):before { content: "Seconds"; }
+}
